@@ -1,6 +1,7 @@
 import { lazy, Suspense, useState } from 'react';
 import useClickOutside from './hooks/useClickOutside';
 import useToggle from './hooks/useToggle';
+import DynamicImportDemo from './components/DynamicImportDemo';
 
 const Dashboard = lazy(() => import('./components/Dashboard'));
 
@@ -41,6 +42,8 @@ const App = () => {
           <Dashboard />
         </Suspense>
       )}
+
+      <DynamicImportDemo />
     </div>
   );
 };
